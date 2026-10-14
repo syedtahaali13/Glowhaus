@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowhaus — Premium Pendant Lamps</title>
+    <meta name="description"
+        content="Discover premium pendant lighting that transforms your space. Glowhaus brings artistry and warmth to every room.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="hero-container" id="heroContainer">
+
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 1 — Negative-Space "LIGHT" Text      -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="negative-space-text" id="negativeText" aria-hidden="true">
+            <span class="light-letter letter-L">L</span><span class="light-letter letter-I">I</span><span class="light-letter letter-G">G</span><span class="light-letter letter-H">H</span><span class="light-letter letter-T">T</span>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 2 — Pendant Lamp + Warm Glow          -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="pendant-lamp-wrapper">
+            <div class="lamp-cord"></div>
+            <img src="assets/pendant-lamp.png" alt="Matte-black bell-shaped pendant lamp" class="pendant-lamp"
+                id="pendantLamp" draggable="false">
+            <div class="lamp-glow" id="lampGlow"></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 3 — Top Navigation                    -->
+        <!-- ═══════════════════════════════════════════ -->
+        <nav class="hero-nav">
+            <div class="nav-left">
+                <div class="nav-links">
+                    <a href="#heroContainer" class="nav-link active">Home</a>
+                    <a href="#specialFeatureArea" class="nav-link">Shop</a>
+                    <a href="#aboutUs" class="nav-link">About Us</a>
+                    <a href="#siteFooter" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-center">
+                <a href="#" class="nav-logo">Glowhaus</a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="navCart" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon-btn" id="navSearch" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </button>
+                <button class="nav-icon-btn" id="navNotification" aria-label="Notifications">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                    </svg>
+                </button>
+                <button class="nav-icon-btn hamburger" id="navMenu" aria-label="Menu">
+                    <span class="nav-menu-text">MENU</span>
+                    <span class="hamburger-box" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 4 — Slider Chevrons                   -->
+        <!-- ═══════════════════════════════════════════ -->
+        <button class="slider-chevron chevron-left" id="chevronLeft" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+        </button>
+        <button class="slider-chevron chevron-right" id="chevronRight" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+            </svg>
+        </button>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 5 — Slide Number + Product Card       -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide-bottom-left">
+            <div class="slide-number" id="slideNumber" aria-hidden="true">01</div>
+            <div class="product-card" id="productCard">
+                <div class="product-card-img-wrapper">
+                    <img src="assets/chandelier.png" alt="Chandeliers" class="product-card-img" id="productCardImg"
+                        draggable="false">
+                    <div class="product-card-fade"></div>
+                </div>
+                <div class="product-card-body">
+                    <span class="product-card-name" id="productCardName">Chandeliers</span>
+                    <div class="product-card-row">
+                        <span class="product-card-price" id="productCardPrice">$299.00</span>
+                        <button class="product-card-btn" id="productCardBtn" aria-label="View product">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 6 — Social Links                      -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="social-links">
+            <a href="#" class="social-link" aria-label="X (Twitter)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- MOBILE ONLY — Side Hanging Lamps            -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="mobile-side-lamp mobile-side-lamp-left" aria-hidden="true">
+            <img src="assets/side-lamp-right.png" alt="" draggable="false">
+            <div class="mobile-lamp-glow"></div>
+        </div>
+        <div class="mobile-side-lamp mobile-side-lamp-right" aria-hidden="true">
+            <img src="assets/side-lamp-right.png" alt="" draggable="false">
+            <div class="mobile-lamp-glow"></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- Cursor Glow Follower (ambient light effect) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="cursor-glow" id="cursorGlow"></div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- LAYER 7 — Fullscreen Navigation Overlay     -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="nav-overlay" id="navOverlay">
+            <div class="nav-overlay-content">
+                <a href="#heroContainer" class="overlay-link">Home</a>
+                <div class="overlay-dropdown" id="categoriesDropdownContainer">
+                    <button class="overlay-link dropdown-btn" id="categoriesBtn">
+                        Categories
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content" id="categoriesDropdown">
+                        <a href="#specialFeatureArea" class="dropdown-link">Chandeliers</a>
+                        <a href="#specialFeatureArea" class="dropdown-link">Hanging Lights</a>
+                        <a href="#specialFeatureArea" class="dropdown-link">Table Lamps</a>
+                        <a href="#specialFeatureArea" class="dropdown-link">Cove Lighting</a>
+                    </div>
+                </div>
+                <a href="#specialFeatureArea" class="overlay-link">Shop</a>
+                <a href="#aboutUs" class="overlay-link">About Us</a>
+                <a href="#siteFooter" class="overlay-link">Contact</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NEW SECTION — PRODUCT MARQUEE LOOP          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="product-marquee-section" id="specialFeatureArea">
+        <div class="marquee-header">
+            <div class="marquee-title-row">
+                <h2 class="marquee-title">Lighting Styles to Match Your Aesthetic</h2>
+                <!-- Day / Night Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                            <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="5" />
+                                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+            <p class="marquee-subtitle">Explore the perfect lighting for every space, from minimalist to luxurious.</p>
+        </div>
+
+        <div class="marquee-track">
+            <!-- First Set -->
+            <div class="marquee-item">
+                <div class="card-img-wrapper">
+                    <img src="assets/chandelier-off.png" alt="Luxe Pendant Light (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/chandelier-on.png" alt="Luxe Pendant Light (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Living Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Luxe Pendant Light</h3>
+                    <p class="card-desc">Dimmable, energy-efficient LED, warm color temperature.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$7,919</span>
+                        <span class="card-price-old">$8,999</span>
+                        <span class="card-discount">12% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item">
+                <div class="card-img-wrapper">
+                    <img src="assets/fancy-candle-light-off.png" alt="Fancy Candle Light (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/fancy-candle-light-on.jpg" alt="Fancy Candle Light (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Dining Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Fancy Candle Light</h3>
+                    <p class="card-desc">Warm ambient glow, decorative finish, perfect ambiance.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$9,660</span>
+                        <span class="card-price-old">$10,500</span>
+                        <span class="card-discount">8% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item">
+                <div class="card-img-wrapper">
+                    <img src="assets/adjustable-floor-lamp-off.png" alt="Adjustable Floor Lamp (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/hanging-light-on.png" alt="Adjustable Floor Lamp (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Living Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Adjustable Floor Lamp</h3>
+                    <p class="card-desc">Customizable height, dimmable, warm and cool color settings.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$11,050</span>
+                        <span class="card-price-old">$13,000</span>
+                        <span class="card-discount">15% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item">
+                <div class="card-img-wrapper">
+                    <img src="assets/wall-light-off.png" alt="Wall Light (day)" class="img-day" draggable="false">
+                    <img src="assets/table-lamp-on.png" alt="Wall Light (night)" class="img-night" draggable="false">
+                    <div class="card-badge">Bedroom</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Wall Light</h3>
+                    <p class="card-desc">Dimmable, soft glow, sleek matte finish.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$6,230</span>
+                        <span class="card-price-old">$7,000</span>
+                        <span class="card-discount">11% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Set (Duplicate for seamless loop) -->
+            <div class="marquee-item" aria-hidden="true">
+                <div class="card-img-wrapper">
+                    <img src="assets/chandelier-off.png" alt="Luxe Pendant Light (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/chandelier-on.png" alt="Luxe Pendant Light (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Living Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Luxe Pendant Light</h3>
+                    <p class="card-desc">Dimmable, energy-efficient LED, warm color temperature.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$7,919</span>
+                        <span class="card-price-old">$8,999</span>
+                        <span class="card-discount">12% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item" aria-hidden="true">
+                <div class="card-img-wrapper">
+                    <img src="assets/fancy-candle-light-off.png" alt="Fancy Candle Light (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/fancy-candle-light-on.jpg" alt="Fancy Candle Light (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Dining Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Fancy Candle Light</h3>
+                    <p class="card-desc">Warm ambient glow, decorative finish, perfect ambiance.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$9,660</span>
+                        <span class="card-price-old">$10,500</span>
+                        <span class="card-discount">8% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item" aria-hidden="true">
+                <div class="card-img-wrapper">
+                    <img src="assets/adjustable-floor-lamp-off.png" alt="Adjustable Floor Lamp (day)" class="img-day"
+                        draggable="false">
+                    <img src="assets/hanging-light-on.png" alt="Adjustable Floor Lamp (night)" class="img-night"
+                        draggable="false">
+                    <div class="card-badge">Living Room</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Adjustable Floor Lamp</h3>
+                    <p class="card-desc">Customizable height, dimmable, warm and cool color settings.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$11,050</span>
+                        <span class="card-price-old">$13,000</span>
+                        <span class="card-discount">15% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-item" aria-hidden="true">
+                <div class="card-img-wrapper">
+                    <img src="assets/wall-light-off.png" alt="Wall Light (day)" class="img-day" draggable="false">
+                    <img src="assets/table-lamp-on.png" alt="Wall Light (night)" class="img-night" draggable="false">
+                    <div class="card-badge">Bedroom</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Wall Light</h3>
+                    <p class="card-desc">Dimmable, soft glow, sleek matte finish.</p>
+                    <div class="card-price-row">
+                        <span class="card-price">$6,230</span>
+                        <span class="card-price-old">$7,000</span>
+                        <span class="card-discount">11% OFF</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Add to Cart</button>
+                        <button class="btn-solid">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquee-footer">
+            <button class="btn-view-all">View all Category <span style="margin-left: 8px;">&rarr;</span></button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TRUST BADGE SECTION                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="trust-badges">
+        <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                </svg>
+            </div>
+            <div class="trust-badge-text">
+                <span class="trust-badge-title">Premium Quality</span>
+                <span class="trust-badge-desc">Handcrafted with the finest materials worldwide.</span>
+            </div>
+        </div>
+        <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+            </div>
+            <div class="trust-badge-text">
+                <span class="trust-badge-title">Certified Quality</span>
+                <span class="trust-badge-desc">All products come with verified quality certification.</span>
+            </div>
+        </div>
+        <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                    <path d="M16 8h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4" />
+                    <circle cx="11.5" cy="18.5" r="2.5" />
+                    <circle cx="4.5" cy="18.5" r="2.5" />
+                </svg>
+            </div>
+            <div class="trust-badge-text">
+                <span class="trust-badge-title">Fast Delivery</span>
+                <span class="trust-badge-desc">Discreet & secure packaging delivered worldwide.</span>
+            </div>
+        </div>
+        <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+            </div>
+            <div class="trust-badge-text">
+                <span class="trust-badge-title">Expert Support</span>
+                <span class="trust-badge-desc">Our team is here to help with any questions.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TESTIMONIAL SECTION                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="testimonial-section" id="testimonialSection">
+        <div class="testimonial-header">
+            <p class="testimonial-eyebrow">What Our Customers Say</p>
+            <h2 class="testimonial-title">Trusted by Thousands of<br>Happy Homeowners</h2>
+        </div>
+
+        <div class="testimonial-carousel-wrapper">
+            <div class="testimonial-stage">
+                <button class="t-nav-btn t-nav-prev" id="testimonialPrev" aria-label="Previous testimonial">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="testimonial-stack" id="testimonialStack">
+                    <!-- Cards injected by JS -->
+                </div>
+
+                <button class="t-nav-btn t-nav-next" id="testimonialNext" aria-label="Next testimonial">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="testimonial-dots-nav">
+                <button class="t-nav-btn t-dots-btn t-dots-prev" id="testimonialPrevMobile" aria-label="Previous testimonial">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+                <button class="t-nav-btn t-dots-btn t-dots-next" id="testimonialNextMobile" aria-label="Next testimonial">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- QUALITY / MISSION SECTION                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="quality-section" id="aboutUs">
+        <div class="quality-text">
+            <p class="quality-eyebrow">Our Craft</p>
+            <h2 class="quality-heading">Illumination Without<br>Compromise</h2>
+            <p class="quality-body">At Glowhaus, we are committed to delivering premium handcrafted luminaires
+                manufactured to the highest standards of artistry, consistency, and quality. Every piece is carefully
+                designed to transform your space — bringing warmth, character, and timeless beauty to every room.</p>
+            <a href="#" class="quality-cta">Explore Our Collection <span>&rarr;</span></a>
+        </div>
+        <div class="quality-image-wrapper">
+            <img src="assets/light-1.png" alt="Handcrafted wooden pendant lights — Our Craft" class="quality-image"
+                draggable="false">
+            <div class="quality-image-overlay"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CTA SECTION                                 -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="cta-section">
+        <div class="cta-image-wrapper">
+            <img src="assets/light-2.png" alt="Elevate Your Space with Glowhaus" class="cta-image" draggable="false">
+        </div>
+        <div class="cta-content">
+            <h2 class="cta-heading">Elevate Your Space</h2>
+            <p class="cta-body">
+                Discover premium lighting fixtures developed with exceptional craftsmanship, quality,
+                and design. Explore our collection and find the right piece for your home.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Shop Now</a>
+                <a href="#" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top">
+            <div class="footer-column brand-column">
+                <h3 class="footer-logo">GLOW<span>HAUS</span></h3>
+                <p class="footer-desc">
+                    All products sold by Glowhaus are intended for interior design and architectural use.
+                    Not for outdoor use unless specified. By purchasing from Glowhaus you confirm that you
+                    agree to our Terms of Use and care instructions.
+                </p>
+                <div class="footer-social">
+                    <span class="footer-social-title">FOLLOW US</span>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">F</a>
+                        <a href="#" class="social-icon">X</a>
+                        <a href="#" class="social-icon">IN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-column links-column">
+                <h4 class="footer-list-title">QUICK LINKS</h4>
+                <ul class="footer-list">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column links-column">
+                <h4 class="footer-list-title">SUPPORT</h4>
+                <ul class="footer-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <li><a href="#">REFUND & RETURN POLICY</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column contact-column">
+                <h4 class="footer-list-title">CONTACT US</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </span>
+                        111-0000-11111
+                    </li>
+                    <li>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </span>
+                        ---
+                    </li>
+                    <li>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </span>
+                        UNITED KINGDOM
+                    </li>
+                    <li>
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </span>
+                        ---
+                    </li>
+                </ul>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-list-title">NEWSLETTER</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="EMAIL" required>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2026 GLOWHAUS LLC. ALL RIGHTS RESERVED.</p>
+            <p>INTERIOR USE ONLY — NOT FOR OUTDOOR INSTALLATION — HANDCRAFTED QUALITY</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
