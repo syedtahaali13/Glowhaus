@@ -1,6 +1,6 @@
 # 🔆 Glowhaus — Premium Pendant Lighting E-Commerce Website
 
-> **Live Site → [Click Here to View](YOUR_GITHUB_PAGES_LINK_HERE)**
+> **Live Site → [Click Here to View](https://syedtahaali13.github.io/Glowhaus/)**
 > 
 > ⚠️ **Open on mobile for the full experience. 80% of customers browse on phone — this site was built for them first.**
 
@@ -37,8 +37,11 @@ The mobile version isn't a scaled-down desktop. It's a separate, intentional exp
 
 ## 📸 Preview
 
-![Glowhaus Desktop Preview](<img width="1366" height="3855" alt="Glowhaus — Premium Pendant Lamps" src="https://github.com/user-attachments/assets/00215e27-c096-41cd-9422-275c69d6301f" />
-)
+![Glowhaus Desktop Preview]
+
+
+https://github.com/user-attachments/assets/bc041680-209e-4ba7-8ac0-296c2c6af623
+
 
 ---
 
